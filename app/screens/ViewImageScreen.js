@@ -8,13 +8,13 @@ function ViewImageScreen() {
   return (
     <View style={styles.cointainer}>
       <View style={styles.closeIcon}>
-        <MaterialCommunityIcons name="close" color="white" size="35" />
+        <MaterialCommunityIcons name="close" color="white" size={35} />
       </View>
       <View style={styles.deleteIcon}>
         <MaterialCommunityIcons
           name="trash-can-outline"
           color="white"
-          size="35"
+          size={35}
         />
       </View>
       <Image
