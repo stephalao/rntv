@@ -22,6 +22,7 @@ function ListItemDeleteAction({ onPress }) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: color.danger,
+    height: "100%",
     width: 70,
     justifyContent: "center",
     alignItems: "center",
