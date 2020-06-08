@@ -1,11 +1,15 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
 import Card from "./app/components/Card";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import Icon from "./app/components/Icon";
+import Screen from "./app/components/Screen";
+import ListItem from "./app/components/ListItem";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import AccountScreen from "./app/components/AccountScreen";
 
 export default function App() {
   return (
@@ -17,6 +21,7 @@ export default function App() {
     //   />
     // </View>
     // <ListingDetailsScreen />
-    <MessagesScreen />
+    // <MessagesScreen />
+    <AccountScreen />
   );
 }
