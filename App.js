@@ -12,6 +12,7 @@ import MessagesScreen from "./app/screens/MessagesScreen";
 import ListingsScreen from "./app/screens/ListingsScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
   const [firstName, setFirstName] = useState("");
@@ -27,6 +28,7 @@ export default function App() {
           borderBottomColor: "#ccc",
         }}
       />
+      <AppTextInput placeholder="Username" icon="email" />
     </Screen>
     // </View>
     // <ListingDetailsScreen />
