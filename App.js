@@ -13,22 +13,16 @@ import ListingsScreen from "./app/screens/ListingsScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import AppTextInput from "./app/components/AppTextInput";
+import AppPicker from "./app/components/AppPicker";
+import AppText from "./app/components/AppText";
 
 export default function App() {
   const [firstName, setFirstName] = useState("");
 
   return (
     <Screen>
-      <Text>{firstName}</Text>
-      <TextInput
-        onChangeText={(text) => setFirstName(text)}
-        placeholder="First Name"
-        style={{
-          borderBottomWidth: 1,
-          borderBottomColor: "#ccc",
-        }}
-      />
-      <AppTextInput placeholder="Username" icon="email" />
+      <AppPicker icon="apps" placeholder="Category" />
+      <AppTextInput icon="email" placeholder="Email" />
     </Screen>
     // </View>
     // <ListingDetailsScreen />
