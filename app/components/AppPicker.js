@@ -11,11 +11,12 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import AppText from "./AppText";
 import Screen from "./Screen";
+import AppText from "./AppText";
+import PickerItem from "./PickerItem";
 import defaultStyles from "../config/styles";
 
-function AppPicker({ icon, items, placeholder }) {
+function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <React.Fragment>
@@ -29,7 +30,9 @@ function AppPicker({ icon, items, placeholder }) {
               style={styles.icon}
             />
           )}
-          <AppText style={styles.text}>{placeholder}</AppText>
+          <AppText style={styles.text}>
+            {selectedItem ? selectedItem.label : placeholder}
+          </AppText>
           <MaterialCommunityIcons
             name="chevron-down"
             size={20}
@@ -44,7 +47,15 @@ function AppPicker({ icon, items, placeholder }) {
         <FlatList
           data={items}
           keyExtractor={(item) => item.value.toString()}
-          renderItem={({ item }) => cons}
+          renderItem={({ item }) => (
+            <PickerItem
+              label={item.label}
+              onPress={() => {
+                setModalVisible(false);
+                onSelectItem(item);
+              }}
+            />
+          )}
         />
       </Modal>
     </React.Fragment>
